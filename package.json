@@ -1,0 +1,19 @@
+{
+  "name": "edward-aly-oss",
+  "description": "aly oss",
+  "version": "0.2.7",
+  "author": "edward",
+  "homepage": "https://github.com/edwardxyt/aly-oss",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "ali-oss": "^6.0.1"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "license": "BSD",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --require babel-register --reporter=nyan"
+  }
+}
