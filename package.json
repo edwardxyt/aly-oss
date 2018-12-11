@@ -1,16 +1,18 @@
 {
   "name": "edward-aly-oss",
   "description": "aly oss",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "author": "edward",
   "homepage": "https://github.com/edwardxyt/aly-oss",
   "engines": {
     "node": ">=8"
   },
   "dependencies": {
-    "ali-oss": "^6.0.1"
+    "ali-oss": "^6.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+
+  },
   "keywords": [],
   "license": "BSD",
   "scripts": {
