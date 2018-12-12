@@ -1,6 +1,7 @@
 const OSS = require('ali-oss');
 const glob = require("glob")
 const path = require("path");
+const fs = require('fs');
 
 module.exports = class OSSFactory {
 
@@ -14,8 +15,14 @@ module.exports = class OSSFactory {
 		});
 	}
 
-	async list() {
-		return await this.client.list();
+	async list(prefix = '', marker = '') {
+		// 列出前缀为'my-'且在'my-object'之后的文件
+		// prefix: 'my-',
+		// marker: 'my-object'
+		return await this.client.list({
+			prefix,
+			marker
+		});
 	}
 
 
@@ -42,6 +49,24 @@ module.exports = class OSSFactory {
 			return await this.client.put(name, file);
 		} catch (err) {
 			console.log(err);
+		}
+	}
+
+	async putStream(name, file) {
+		try {
+			// use 'chunked encoding'
+			// let stream = fs.createReadStream(file);
+			// let result = await client.putStream(name, stream);
+			// console.log(result);
+
+			// don't use 'chunked encoding'
+			let stream = fs.createReadStream(file);
+			let size = fs.statSync(file).size;
+			let result = await client.putStream(
+				name, stream, { contentLength: size });
+			console.log(result);
+		} catch (e) {
+			console.log(e)
 		}
 	}
 
