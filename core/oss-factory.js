@@ -55,13 +55,13 @@ module.exports = class OSSFactory {
 	async putStream(name, file) {
 		try {
 			// use 'chunked encoding'
-			let stream = await fs.createReadStream(file);
-			return await client.putStream(name, stream);
+			let stream = fs.createReadStream(file);
+			return await this.client.putStream(name, stream);
 
 			// don't use 'chunked encoding'
 			// let stream = fs.createReadStream(file);
 			// let size = fs.statSync(file).size;
-			// let result = await client.putStream(
+			// let result = await this.client.putStream(
 			// 	name, stream, { contentLength: size });
 			// console.log(result);
 		} catch (e) {
