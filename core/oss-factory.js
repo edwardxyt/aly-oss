@@ -56,8 +56,7 @@ module.exports = class OSSFactory {
 		try {
 			// use 'chunked encoding'
 			let stream = fs.createReadStream(file);
-			let result = await client.putStream(name, stream);
-			console.log(result);
+			return await client.putStream(name, stream);
 
 			// don't use 'chunked encoding'
 			// let stream = fs.createReadStream(file);
