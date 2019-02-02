@@ -1,7 +1,7 @@
 {
   "name": "edward-aly-oss",
   "description": "aly oss",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "author": "edward",
   "main": "bin/alyoss",
   "bin": {
