@@ -3,6 +3,7 @@
   "description": "aly oss",
   "version": "0.3.5",
   "author": "edward",
+  "main": "bin/alyoss",
   "homepage": "https://github.com/edwardxyt/aly-oss",
   "engines": {
     "node": ">=8"
@@ -11,7 +12,8 @@
     "ali-oss": "^6.0.2"
   },
   "devDependencies": {
-
+    "debug": "^4.1.1",
+    "npm-check": "^5.9.0"
   },
   "keywords": [],
   "license": "BSD",
