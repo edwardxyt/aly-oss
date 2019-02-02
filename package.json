@@ -1,9 +1,12 @@
 {
   "name": "edward-aly-oss",
   "description": "aly oss",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "author": "edward",
   "main": "bin/alyoss",
+  "bin": {
+    "alyoss": "bin/alyoss"
+  },
   "homepage": "https://github.com/edwardxyt/aly-oss",
   "engines": {
     "node": ">=8"
