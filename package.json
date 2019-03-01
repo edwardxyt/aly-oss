@@ -1,7 +1,7 @@
 {
   "name": "edward-aly-oss",
   "description": "aly oss",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "author": "edward",
   "main": "index.js",
   "bin": {
