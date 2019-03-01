@@ -28,14 +28,14 @@ module.exports = class OSSFactory {
     }
   }
 
-  async list({prefix = "", marker = "" , 'max-keys' = 5000}) {
+  async list({prefix = "", marker = "" , max-keys = 5000}) {
     // 列出前缀为'my-'且在'my-object'之后的文件
     // prefix: 'my-',
     // marker: 'my-object'
     return await this.client.list({
       prefix,
       marker,
-      'max-keys': 'max-keys'
+      max-keys,
     });
   }
 
